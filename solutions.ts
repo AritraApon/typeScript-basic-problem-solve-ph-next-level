@@ -1,14 +1,17 @@
 
-const multiplyValue = (value:number ,multiplier:number=2):number => {
-    return value * multiplier
+const multiplyValue = (value: number, multiplier?: number): number => {
+  if (multiplier === undefined) {
+    return value * 2;
+  } else {
+    return value * multiplier;
+  }
 }
 
 
 
 
-
-type PrcessInput = number | string | boolean
-const processInput =( value: PrcessInput ):number | string=>{
+type ProcessInput = number | string | boolean
+const processInput =( value: ProcessInput ):number | string=>{
 
     if(typeof value === 'string'){
         return value.trim().toLowerCase()
