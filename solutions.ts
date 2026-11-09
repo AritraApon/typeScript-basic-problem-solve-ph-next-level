@@ -39,12 +39,9 @@ const formatCoordinate = (
 
 
 
-type ConcatFunc = <T>(...arrays: T[][]) => T[];
-
-const concatenateArrays: ConcatFunc = (...arrays) => {
+const concatenateArrays = <T>(...arrays: T[][]): T[] => {
   return arrays.flat();
 };
-
 
 
 
